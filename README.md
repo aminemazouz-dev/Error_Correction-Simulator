@@ -85,29 +85,6 @@ As the noise increases, Hamming's correction rate quickly drops, while Reed-Solo
 
 ---
 
-## Project Architecture
-Error_Correction-Simulator/
-├── 📁 simulation/
-│   ├── simulate_bsc_channel.py      # Simulation canal BSC
-│   ├── hamming_simulation.py        # Tests Hamming
-│   └── reed_solomon_simulation.py   # Tests Reed-Solomon
-├── 📁 transmission/
-│   ├── raspberry_pi/
-│   │   ├── sender_no_encoding_pi.py
-│   │   ├── sender_hamming_pi.py
-│   │   └── sender_reed_solomon_pi.py
-│   └── pc/
-│       ├── receiver_no_decoding_pc.py
-│       ├── receiver_hamming_pc.py
-│       └── receiver_reed_solomon_pc.py
-├── 📁 analysis/
-│   ├── performance_graphs.py        # Génération graphiques
-├── 📁 assets/
-│   ├── performance_comparison.png   # Graphiques de performance
-├── 📁 docs/
-│   └── Optimisation_des_transmissions_numériques.pdf
-└── README.md
-
 ## About the author
 
 Mohammed Amine Mazouz  
