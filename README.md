@@ -42,16 +42,19 @@ By simulating and then testing real transmissions with error correction, the goa
 ---
 
 ## Project Structure
+## Project Structure
 
- simulate_bsc_channel.py : Simulates a noisy binary channel and applies error correction 
- sender_no_encoding_pi.py : Sends raw data (no encoding) from Raspberry Pi 
- sender_hamming_pi.py : Sends Hamming-encoded messages 
- sender_reed_solomon_pi.py :  Sends Reed-Solomon encoded messages 
- receiver_no_decoding_pc.py : Receives uncorrected messages on the PC 
- receiver_hamming_pc.py : Receives and decodes messages using Hamming code 
- receiver_reed_solomon_pc.py : Receives and decodes messages using Reed-Solomon 
- performance_graphs.py : Generates performance graphs based on simulation results 
- Optimisation_des_transmissions_numériques.pdf : Full technical report (in French), including math, code structure, results 
+| File                                      | Description                                         |
+|-------------------------------------------|----------------------------------------------------|
+| simulate_bsc_channel.py                    | Simulates a noisy binary channel and applies error correction  |
+| sender_no_encoding_pi.py                   | Sends raw data (no encoding) from Raspberry Pi      |
+| sender_hamming_pi.py                       | Sends Hamming-encoded messages                       |
+| sender_reed_solomon_pi.py                  | Sends Reed-Solomon encoded messages                  |
+| receiver_no_decoding_pc.py                  | Receives uncorrected messages on the PC              |
+| receiver_hamming_pc.py                      | Receives and decodes messages using Hamming code     |
+| receiver_reed_solomon_pc.py                 | Receives and decodes messages using Reed-Solomon     |
+| performance_graphs.py                        | Generates performance graphs based on simulation results  |
+| Optimisation_des_transmissions_numériques.pdf | Full technical report (in French), including math, code structure, results |
 
 ---
 
