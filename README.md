@@ -9,7 +9,54 @@ The two coding schemes implemented are:
 - **Reed-Solomon Code (255,223)** — robust, used in CDs, QR codes, and space communications
 
 ---
+## Theoretical Principles
 
+This project is based on the mathematical theory of **error-correcting codes**, which are fundamental tools in digital communication systems. The objective is to **ensure data integrity** when transmitting information over a noisy channel.
+
+### Problem Statement
+
+When digital data is transmitted (via a wireless network, physical storage, etc.), it is exposed to **random noise** that can flip bits or corrupt symbols. The receiver might thus receive a message different from the one that was originally sent.
+
+### Mathematical Model: Binary Symmetric Channel (BSC)
+
+The transmission channel is modeled as a **Binary Symmetric Channel (BSC)**. In this model:
+
+- Each bit has a probability `p` of being flipped during transmission.
+- Errors occur **independently** across bits.
+- This simulates real-world noise in a mathematically tractable way.
+
+### Redundancy and Error Correction
+
+To detect and correct such errors, **redundancy** is introduced into the message through special encoding schemes. The sender encodes the original message into a longer codeword, allowing the receiver to recover the original message even if some bits were altered.
+
+### Implemented Codes
+
+Two classical error-correcting codes are implemented and compared:
+
+#### 1. Hamming Code (7,4)
+
+- Encodes 4 bits of data into 7 bits.
+- Can **detect and correct** any single-bit error.
+- Based on linear algebra over **binary fields** (`𝔽₂`), using parity-check and generator matrices.
+- Efficient but limited in correcting multiple errors.
+
+#### 2. Reed-Solomon Code (255,223)
+
+- Encodes 223 symbols into 255 symbols over **finite fields** (`𝔽₂⁸`).
+- Can correct up to 16 symbol errors.
+- Based on **polynomial interpolation** and evaluation over Galois Fields.
+- Used in real-world systems like CDs, QR codes, and satellite communication due to its high resilience.
+
+### Code Structure and Decoding
+
+Both codes follow this general workflow:
+
+1. **Encoding**: Apply a deterministic function that maps original data to a codeword.
+2. **Transmission**: Simulate errors via the BSC.
+3. **Decoding**: Use algebraic algorithms (syndrome decoding, Berlekamp-Massey, etc.) to recover the original message.
+
+
+---------
 ## Why this project?
 
 In any real communication system, data can be altered by noise — whether over the air, on disk, or in memory.  
