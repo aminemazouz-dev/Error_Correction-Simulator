@@ -42,7 +42,7 @@ Two classical error-correcting codes are implemented and compared:
 
 #### 2. Reed-Solomon Code (255,223)
 
-- Encodes 223 symbols into 255 symbols over **finite fields** (`𝔽₂⁸`).
+- Encodes 223 symbols into 255 symbols over **finite fields** (`𝔽₂`).
 - Can correct up to 16 symbol errors.
 - Based on **polynomial interpolation** and evaluation over Galois Fields.
 - Used in real-world systems like CDs, QR codes, and satellite communication due to its high resilience.
